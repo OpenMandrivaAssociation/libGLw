@@ -1,0 +1,28 @@
+--- Mesa-7.11.2/configs/default.motif	2011-10-15 02:43:58.000000000 +0200
++++ Mesa-7.11.2/configs/default	2012-03-05 17:25:03.941053333 +0100
+@@ -101,14 +101,13 @@ MESA_ASM_SOURCES =
+ 
+ # GLw widget sources (Append "GLwMDrawA.c" here and add -lXm to GLW_LIB_DEPS in
+ # order to build the Motif widget too)
+-GLW_SOURCES = GLwDrawA.c
++GLW_SOURCES = GLwDrawA.c GLwMDrawA.c
+ MOTIF_CFLAGS = -I/usr/include/Motif1.2
+ 
+ 
+ # Directories to build
+ LIB_DIR = lib
+-SRC_DIRS = glsl mapi/glapi mapi/vgapi mesa \
+-	gallium egl gallium/winsys gallium/targets glu glut/glx glw
++SRC_DIRS = glw
+ GLU_DIRS = sgi
+ DRIVER_DIRS = x11 osmesa
+ 
+@@ -138,7 +137,7 @@ EGL_LIB_DEPS    = $(EXTRA_LIB_PATH) -ldl
+ OSMESA_LIB_DEPS = $(EXTRA_LIB_PATH) -L$(TOP)/$(LIB_DIR) -l$(GL_LIB)
+ GLU_LIB_DEPS    = $(EXTRA_LIB_PATH) -L$(TOP)/$(LIB_DIR) -l$(GL_LIB) -lm
+ GLUT_LIB_DEPS   = $(EXTRA_LIB_PATH) -L$(TOP)/$(LIB_DIR) -l$(GLU_LIB) -l$(GL_LIB) -lX11 -lXmu -lXi -lm
+-GLW_LIB_DEPS    = $(EXTRA_LIB_PATH) -L$(TOP)/$(LIB_DIR) -l$(GL_LIB) -lXt -lX11
++GLW_LIB_DEPS    = -l$(GL_LIB) -lXt -lX11 -lXm
+ APP_LIB_DEPS    = $(EXTRA_LIB_PATH) -L$(TOP)/$(LIB_DIR) -l$(GLUT_LIB) -l$(GLU_LIB) -l$(GL_LIB) -lm
+ GLESv1_CM_LIB_DEPS = $(EXTRA_LIB_PATH) -lpthread
+ GLESv2_LIB_DEPS = $(EXTRA_LIB_PATH) -lpthread
