@@ -64,3 +64,10 @@ rm -rf $RPM_BUILD_ROOT
 %_includedir/GL/GLwMDrawA.h
 %_includedir/GL/GLwMDrawAP.h
 %_libdir/pkgconfig/glw.pc
+
+
+%changelog
+* Mon Mar 05 2012 Bernhard Rosenkraenzer <bero@bero.eu> 7.11.2-1
++ Revision: 782267
+- import libGLw
+
