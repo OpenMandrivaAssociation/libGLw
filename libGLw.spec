@@ -7,7 +7,7 @@ Version: 7.11.2
 Release: 1
 License: MIT
 Group: System/Libraries
-URL: http://www.mesa3d.org
+URL: https://www.mesa3d.org
 Source0: ftp://ftp.freedesktop.org/pub/mesa/%version/MesaLib-%version.tar.bz2
 Patch0: mesa-6.5-build-config.patch
 Patch1: mesa-7.11.2-libGLw.patch
