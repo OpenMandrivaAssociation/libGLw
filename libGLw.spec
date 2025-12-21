@@ -11,6 +11,7 @@ URL: https://www.mesa3d.org
 Source0: ftp://ftp.freedesktop.org/pub/mesa/%version/MesaLib-%version.tar.bz2
 Patch0: mesa-6.5-build-config.patch
 Patch1: mesa-7.11.2-libGLw.patch
+BuildRequires:	make
 BuildRequires: lesstif-devel
 BuildRequires: pkgconfig(gl)
 
